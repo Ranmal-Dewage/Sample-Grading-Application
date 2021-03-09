@@ -1,0 +1,16 @@
+{
+  "name": "grading-app-backend",
+  "version": "1.0.0",
+  "description": "backend APIs",
+  "main": "service.js",
+  "scripts": {
+    "start": "node ./service.js"
+  },
+  "author": "Ranmal Dewage",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.18",
+    "node-fetch": "^2.6.1"
+  }
+}
