@@ -26,7 +26,7 @@ ST_003
 TEA_001  
 TEA_002  
 
-Dummy password is same for all student and teacher given above : **1234**
+Dummy password is same for all students and teachers given above : **1234**
 
 
 ### REST APIs Exposed by Backend NodeJS
