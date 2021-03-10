@@ -2,20 +2,20 @@
 Sample Grading Application designed using Angular as frontend technology, Node JS as backend technology and MongoDB as the database.
 
 
-# How to deploy the Backend
+### How to deploy the Backend
 
 1. npm install
 2. npm start
 3. Since there are DB initialization scripts in the service.js file, comment out the line 25, 26, 27 after initial run of backend server, if you are restarting the server again and again.
 
 
-# How to deploy the Frontend
+### How to deploy the Frontend
 
 1. npm install
 2. npm start or ng serve
 
 
-# Student IDs, Teacher IDs and Passwords
+### Student IDs, Teacher IDs and Passwords
 
 **Student IDs :**
 ST_001
@@ -29,7 +29,7 @@ TEA_002
 Dummy password is same for all student and teacher given above : **1234**
 
 
-# REST APIs Exposed by Backend NodeJS
+### REST APIs Exposed by Backend NodeJS
 
 1. Get particular student deatils  
 **http://localhost:3000/students/:sid**
