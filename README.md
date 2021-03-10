@@ -18,13 +18,13 @@ Sample Grading Application designed using Angular as frontend technology, Node J
 ### Student IDs, Teacher IDs and Passwords
 
 **Student IDs :**
-ST_001
-ST_002
-ST_003
+ST_001  
+ST_002  
+ST_003  
 
 **Teacher IDs :**
-TEA_001
-TEA_002
+TEA_001  
+TEA_002  
 
 Dummy password is same for all student and teacher given above : **1234**
 
