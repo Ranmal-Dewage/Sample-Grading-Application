@@ -31,23 +31,24 @@ Dummy password is same for all student and teacher given above : **1234**
 
 # REST APIs Exposed by Backend NodeJS
 
-1. Get particular student deatils
+1. Get particular student deatils  
 **http://localhost:3000/students/:sid**
 
-2. Get particular teacher deatils
+2. Get particular teacher deatils  
 **http://localhost:3000/teachers/:tid**
 
-3. Get particular assignment deatils
+3. Get particular assignment deatils  
 **http://localhost:3000/assignments/:aid**
 
-4. Get results of all the students in a given assignment
+4. Get results of all the students in a given assignment  
 **http://localhost:3000/students/assignment/:aid**
 
-5. Get statistical details about the assignment questions
+5. Get statistical details about the assignment questions  
 **http://localhost:3000/assignments/:aid/statistics**
 
-6.Login of students (POST)
+8. Login of students (POST)  
 **http://localhost:3000/students/login**
 
-7.Login of teachers (POST)
-**http://localhost:3000/teachers/login**
+10. Login of teachers (POST)  
+**http://localhost:3000/teachers/login** 
+
