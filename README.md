@@ -6,7 +6,7 @@ Sample Grading Application designed using Angular as frontend technology, Node J
 
 1. npm install
 2. npm start
-3. Since there is DB initialization scripts in the service.js file, comment out the line 25,26,27 after initial run of backend server
+3. Since there is DB initialization scripts in the service.js file, comment out the line 25, 26, 27 after initial run of backend server
 
 
 # How to deploy the Frontend
