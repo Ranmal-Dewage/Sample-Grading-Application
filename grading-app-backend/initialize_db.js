@@ -64,7 +64,7 @@ const initializeStudents = () => {
     let student_1 = {
         sid: "ST_001",
         Name: "Ranmal Dewage",
-        password: 1234,
+        password: "1234",
         assignments: [{
             aid: "HIS_001", assignmentName: "Name the Historical Events", courseName: "History",
             studentAnswers: ["J.R.Jayewardene", "Margaret Thatcher", "Sumerian", "1914", "1939"],
@@ -88,7 +88,7 @@ const initializeStudents = () => {
     let student_2 = {
         sid: "ST_002",
         Name: "Tenusha Guruge",
-        password: 1234,
+        password: "1234",
         assignments: [{
             aid: "GEO_001", assignmentName: "Name the Capitals", courseName: "Geography",
             studentAnswers: ["New Delhi", "Melbourne", "London", "Washington DC", "Torronto"],
@@ -112,7 +112,7 @@ const initializeStudents = () => {
     let student_3 = {
         sid: "ST_003",
         Name: "Vimukthi Rajapaksha",
-        password: 1234,
+        password: "1234",
         assignments: [{
             aid: "GEO_001", assignmentName: "Name the Capitals", courseName: "Geography",
             studentAnswers: ["Kolkata", "Melbourne", "London", "New York", "Torronto"],
@@ -167,6 +167,7 @@ const initializeTeachers = () => {
     let teacher_1 = {
         tid: "TEA_001",
         Name: "Dharshana Kasthurirathna",
+        password: "1234",
         assignments: [
             { aid: "GEO_001", assignmentName: "Name the Capitals", courseName: "Geography" },
             { aid: "MAT_001", assignmentName: "Calculate the Values", courseName: "Mathematics" }
@@ -176,6 +177,7 @@ const initializeTeachers = () => {
     let teacher_2 = {
         tid: "TEA_002",
         Name: "Dhammika De Silva",
+        password: "1234",
         assignments: [
             { aid: "HIS_001", assignmentName: "Name the Historical Events", courseName: "History" }
         ]

@@ -1,0 +1,62 @@
+<!-- Head -->
+<div class="text-center">
+
+    <!-- Titles -->
+    <h4 class="card-title h4 pb-2 white-text"><strong>{{courseName}}</strong></h4>
+
+    <h5 class="h5 mb-4 white-text">{{assignmentName}}</h5>
+
+    <button type="button" mdbBtn color="success" mdbWavesEffect (click)="goBack()">
+        Go Back
+    </button>
+
+</div>
+<!-- Head -->
+
+<mdb-card *ngFor="let questions of questions; let i=index" class="card-margin">
+    <!--Card content-->
+    <mdb-card-body>
+
+        <!-- Question -->
+        <mdb-card-title>
+            <h5>Q{{i+1}} : {{ questions}}</h5>
+        </mdb-card-title>
+        <br />
+
+        <!-- Student Answer -->
+        <mdb-card-title>
+            <h6>Student Answer : {{ studentAnswers[i]}}</h6>
+        </mdb-card-title>
+
+        <!-- Correct Answer -->
+        <mdb-card-title>
+            <h6>Correct Answer : {{ correctAnswers[i]}}</h6>
+        </mdb-card-title>
+        <br />
+
+
+        <div>
+            <div class="row">
+                <div class="col-sm">
+                    <mdb-card-text>
+                        Question Status : {{answerStatus[i]}}
+                    </mdb-card-text>
+                </div>
+                <div *ngIf="answerStatus[i]=='Correct'; then ifBlock else elseBlock">
+                </div>
+                <ng-template #ifBlock>
+                    <div class="col-sm">
+                        <mdb-icon fas icon="check" size="2x" class="green-text"></mdb-icon>
+                    </div>
+                </ng-template>
+                <ng-template #elseBlock>
+                    <div class="col-sm">
+                        <mdb-icon fas icon="times" size="2x" class="red-text"></mdb-icon>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+
+    </mdb-card-body>
+</mdb-card>
+<!-- Card -->

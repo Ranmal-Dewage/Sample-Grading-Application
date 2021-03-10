@@ -2,6 +2,33 @@ const express = require("express");
 const route = express.Router();
 const Students = require("../models/student_model");
 
+//login api of the students
+route.post("/login", (req, res) => {
+
+    try {
+
+        const query = { sid: req.body.id, password: req.body.password }
+        Students.find(query, (err, student) => {
+            if (err) {
+                console.log(err)
+                res.status(500).json({ err })
+            } else {
+                if (student.length == 0) {
+                    res.status(200).json([{ status: false }])
+                } else {
+                    res.status(200).json([{ status: true }])
+                }
+            }
+        });
+
+
+    } catch (err) {
+        res.status(500).json({ err })
+    }
+
+});
+
+
 //get particular student details
 route.get("/:sid", (req, res) => {
 

@@ -1,0 +1,51 @@
+<!-- Card -->
+<mdb-card *ngFor="let assignment of assignments" class="card-margin">
+    <!--Card content-->
+    <mdb-card-body>
+
+        <!--Title 1-->
+        <mdb-card-title>
+            <h3>Course Name : {{ assignment.courseName}}</h3>
+        </mdb-card-title>
+        <!--Title 2-->
+        <mdb-card-title>
+            <h5>Assignment Name : {{ assignment.assignmentName}}</h5>
+        </mdb-card-title>
+
+        <!--Text Deatils-->
+        <mdb-card-text>
+            Score : {{assignment.score}}
+        </mdb-card-text>
+
+        <!--Text Deatils-->
+        <div>
+            <div class="row">
+                <div class="col-sm">
+                    <mdb-card-text>
+                        Status : {{assignment.status}}
+                    </mdb-card-text>
+                </div>
+                <div *ngIf="assignment.status=='Pass'; then ifBlock else elseBlock">
+                </div>
+                <ng-template #ifBlock>
+                    <div class="col-sm">
+                        <mdb-icon fas icon="check" size="2x" class="green-text"></mdb-icon>
+                    </div>
+                </ng-template>
+                <ng-template #elseBlock>
+                    <div class="col-sm">
+                        <mdb-icon fas icon="times" size="2x" class="red-text"></mdb-icon>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+
+
+        <button type="button" mdbBtn color="info" mdbWavesEffect
+            (click)="reviewResults(assignment.aid, assignment.studentAnswers, assignment.questionStatus)">
+            Review Results
+        </button>
+
+    </mdb-card-body>
+</mdb-card>
+<!-- Card -->

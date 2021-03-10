@@ -1,0 +1,41 @@
+<!-- Card -->
+<mdb-card *ngFor="let assignment of assignments" class="card-margin">
+    <!--Card content-->
+    <mdb-card-body>
+
+        <!--Title 1-->
+        <mdb-card-title>
+            <h3>Course Name : {{ assignment.courseName}}</h3>
+        </mdb-card-title>
+        <!--Title 2-->
+        <mdb-card-title>
+            <h5>Assignment Name : {{ assignment.assignmentName}}</h5>
+        </mdb-card-title>
+        <!--Text-->
+        <mdb-card-text>
+            Assignment ID : {{assignment.aid}}
+        </mdb-card-text>
+        <br />
+
+
+        <!--Buttons-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <button type="button" mdbBtn color="info" mdbWavesEffect
+                        (click)="routeToOverallGradings(assignment.aid)">
+                        Overall Gradings
+                    </button>
+                </div>
+                <div class="col-md-4">
+                    <button type="button" mdbBtn color="secondary" mdbWavesEffect
+                        (click)="routeToStatistics(assignment.aid)">
+                        Assignment Statistics
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </mdb-card-body>
+</mdb-card>
+<!-- Card -->

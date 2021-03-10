@@ -1,0 +1,36 @@
+<!-- Head -->
+<div class="text-center">
+
+    <!-- Titles -->
+    <h4 class="card-title h4 pb-2 white-text"><strong>Overall Grading Details</strong></h4>
+
+    <!-- Button -->
+    <button type="button" mdbBtn color="success" mdbWavesEffect (click)="goBack()">
+        Go Back
+    </button>
+
+</div>
+<!-- Head -->
+
+<br />
+
+<!-- Table -->
+<table mdbTable>
+    <thead class="light-blue darken-4 white-text">
+        <tr>
+            <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+        </tr>
+    </thead>
+    <tbody class="white black-text">
+        <tr mdbTableCol *ngFor="let grading of studentGradings">
+            <th scope="row">{{grading.sid}}</th>
+            <th>{{grading.Name}}</th>
+            <th>{{grading.assignments[0].aid}}</th>
+            <th>{{grading.assignments[0].assignmentName}}</th>
+            <th>{{grading.assignments[0].courseName}}</th>
+            <th>{{grading.assignments[0].score}}</th>
+            <th>{{grading.assignments[0].status}}</th>
+        </tr>
+    </tbody>
+</table>
+<!-- Table -->

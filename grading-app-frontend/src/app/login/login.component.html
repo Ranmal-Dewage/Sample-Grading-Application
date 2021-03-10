@@ -1,0 +1,60 @@
+<div class="container center-div-horizontally-vertically">
+
+    <mdb-card>
+        <!--Card content-->
+        <mdb-card-body>
+
+            <!-- Form -->
+            <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)"
+                class="text-center p-5 div-shadow form-background">
+                <!-- Logo -->
+                <img src="../../assets/grading-app-logo.png" height="80" class="d-inline-block align-top"
+                    alt="Grading App Icon" mdbWavesEffect>
+                <br />
+                <br />
+                <!-- Headings -->
+                <h4 class="indigo-text h4 mb-4 font-weight-bold">Grading Application</h4>
+                <br />
+
+
+                <p class="h4 mb-4">Sign In</p>
+
+                <!-- Email -->
+                <input type="text" id="loginFormText" name="id" class="form-control mb-4"
+                    placeholder="Student or Teacher ID" ngModel>
+
+                <!-- Password -->
+                <input type="password" id="loginFormPassword" name="password" class="form-control mb-4"
+                    placeholder="Password" ngModel>
+
+                <div class="d-flex justify-content-around">
+                    <div>
+                        <!-- Student Radio Button -->
+                        <input type="radio" value="student" class="custom-control-input" id="studentChecked"
+                            name="selectType" mdbInput [(ngModel)]="selectType">
+                        <label class="custom-control-label" for="studentChecked">Student</label>
+                    </div>
+                    <div>
+                        <!-- Teacher Radio Button -->
+                        <input type="radio" value="teacher" class="custom-control-input" id="teacherChecked"
+                            name="selectType" mdbInput [(ngModel)]="selectType">
+                        <label class="custom-control-label" for="teacherChecked">Teacher</label>
+                    </div>
+                </div>
+                <br />
+                <br />
+
+                <!-- Sign in button -->
+                <div class="button-align">
+                    <button mdbBtn color="primary" block="true" class="my-4 button-size" type="submit">Sign In</button>
+                </div>
+
+            </form>
+
+        </mdb-card-body>
+    </mdb-card>
+
+    <!-- Error Message Notifier -->
+    <notifier-container></notifier-container>
+
+</div>

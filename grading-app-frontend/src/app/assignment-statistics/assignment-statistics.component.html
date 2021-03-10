@@ -1,0 +1,84 @@
+<!-- Head -->
+<div class="text-center">
+
+    <!-- Titles -->
+    <h4 class="card-title h4 pb-2 white-text"><strong>Statistics of the Assignment</strong></h4>
+
+    <!-- Button -->
+    <button type="button" mdbBtn color="success" mdbWavesEffect (click)="goBack()">
+        Go Back
+    </button>
+
+</div>
+<!-- Head -->
+
+<!-- Card -->
+<mdb-card class="card-margin">
+    <!--Card content-->
+    <mdb-card-body>
+
+        <!--Title 3-->
+        <mdb-card-title>
+            <h5>Questions</h5>
+        </mdb-card-title>
+        <br />
+
+        <!--Text Deatils-->
+        <mdb-card-text *ngFor="let question of questions; let i=index">
+            Q{{i+1}} : {{question}}
+        </mdb-card-text>
+
+    </mdb-card-body>
+</mdb-card>
+<!-- Card -->
+
+<!-- Card -->
+<mdb-card class="card-margin">
+    <!--Card content-->
+    <mdb-card-body>
+
+        <!-- Bar Chart Correct Question Statistics -->
+        <div *ngIf="correctQuestions" style="display: block">
+            <canvas mdbChart [chartType]="chartType" [datasets]="correctQuestions" [labels]="chartLabels"
+                [colors]="chartColors" [options]="chartOptions" [legend]="true" (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)">
+            </canvas>
+        </div>
+
+    </mdb-card-body>
+</mdb-card>
+<!-- Card -->
+
+<!-- Card -->
+<mdb-card class="card-margin">
+    <!--Card content-->
+    <mdb-card-body>
+
+        <!-- Bar Chart Incorrect Question Statistics -->
+        <div *ngIf="incorrectQuestions" style="display: block">
+            <canvas mdbChart [chartType]="chartType" [datasets]="incorrectQuestions" [labels]="chartLabels"
+                [colors]="chartColors" [options]="chartOptions" [legend]="true" (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)">
+            </canvas>
+        </div>
+
+    </mdb-card-body>
+</mdb-card>
+<!-- Card -->
+
+<!-- Card -->
+<mdb-card class="card-margin">
+    <!--Card content-->
+    <mdb-card-body>
+
+        <!-- Bar Chart Average Time Statistics -->
+        <div *ngIf="averageTimeTaken" style="display: block">
+            <canvas mdbChart [chartType]="chartType" [datasets]="averageTimeTaken" [labels]="chartLabels"
+                [colors]="chartColors" [options]="chartOptions" [legend]="true" (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)">
+            </canvas>
+        </div>
+
+    </mdb-card-body>
+</mdb-card>
+<!-- Card -->
