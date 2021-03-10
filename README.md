@@ -17,12 +17,12 @@ Sample Grading Application designed using Angular as frontend technology, Node J
 
 ### Student IDs, Teacher IDs and Passwords
 
-**Student IDs :**
+**Student IDs :**  
 ST_001  
 ST_002  
 ST_003  
 
-**Teacher IDs :**
+**Teacher IDs :**  
 TEA_001  
 TEA_002  
 
