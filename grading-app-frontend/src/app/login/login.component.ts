@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
         .subscribe((reponse) => {
 
           if (reponse[0].status) {
-            this.router.navigate(['student', data.id], { replaceUrl: true });
+            this.router.navigate(['student', data.id]);
           } else {
             this.notifierService.notify("error", "User Id or Password is Invalid !!!");
           }
