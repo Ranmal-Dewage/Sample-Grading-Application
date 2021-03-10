@@ -22,9 +22,9 @@ db.once("open", () => {
     // comment below line after initial run
     // db initialization codes
 
-    // modelInit.initiAssignment();
-    // modelInit.initiStudents();
-    // modelInit.initiTeachers();
+    modelInit.initiAssignment();
+    modelInit.initiStudents();
+    modelInit.initiTeachers();
     
 });
 
